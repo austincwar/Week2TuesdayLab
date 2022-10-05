@@ -52,6 +52,14 @@ console.log(dog['color'])
 
 //Code here
 
+let favoriteThings = {
+  band: 'Claude',
+  food: 'Burger',
+  person: 'Partner',
+  book: 'Harry Potter',
+  movie: 'Harry Potter',
+  holiday: 'Halloween'
+}
 
 
 /*
@@ -60,6 +68,8 @@ console.log(dog['color'])
 
 //Code here
 
+favoriteThings.season = 'summer'
+console.log(favoriteThings)
 
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
@@ -67,6 +77,9 @@ console.log(dog['color'])
 */
 
 //Code here
+
+favoriteThings.food = "Chicken Nuggets"
+console.log(favoriteThings)
 
 
 //////////////////////////// PROBLEM 6 ////////////////////////////
@@ -86,6 +99,10 @@ var carDetails = {
 
 //Code Here
 
+let {color} = carDetails 
+let {make} = carDetails
+let {model} = carDetails
+let {year} = carDetails
 
 
 //////////////////////////// PROBLEM 7 ////////////////////////////
@@ -98,13 +115,23 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
+
+let {firstName} = obj
+let {lastName} = obj
+let {title} = obj
   
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
 
-
+let greet = {
+  firstName: "Austin",
+  lastName: "Warnecke",
+  title: "Cyber"
+}
+greeting(greet)
+console.log(greeting(greet))
 
 //////////////////////////// PROBLEM 8 ////////////////////////////
 
@@ -120,6 +147,17 @@ function greeting( obj ) {
 
 
 
+// function totalPopulation(obj) {
+//   Utah: 1,
+//   Cali: 2,
+//   Texas: 3,
+//   Arizona: 4
+// }
+
+// let {Utah, Cali, Texas, Arizona} = States
+
+
+
 //////////////////////////// PROBLEM 9 ////////////////////////////
 
 /*
@@ -131,6 +169,21 @@ function greeting( obj ) {
 */
 
 //Code Here
+
+ let foodIngredients = {
+   carb: "carb",
+   fat: "fat",
+   protein: "protein",
+}
+
+function ingredients(obj) {
+  let {carb, fat, protein} = foodIngredients
+  let arr = []
+arr.push (carb, fat, protein) //.push allows future changes
+  return arr
+}
+
+console.log(ingredients(foodIngredients))
 
 
 
@@ -154,6 +207,16 @@ var user = {
 
 //Code Here
 
+let {name} = user
+let {email} = user
+
+name = "Bryan G. Smith"
+email = "Bryan.smith@devmounta.in"
+
+console.log(user)
+console.log(name)
+console.log(email)
+
 
 //////////////////////////// PROBLEM 11 ////////////////////////////
 /*
@@ -161,6 +224,9 @@ var user = {
 */
 
 //Code Here
+
+delete user.age
+console.log(user)
 
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
@@ -172,6 +238,20 @@ var user = {
 
 //Code here
 
+class Cat {
+  constructor(name, age, color){
+    this.name = name
+    this.age = age
+    this.color = color
+  }
+  greeting() {
+    console.log(`Hello, I am a ${this.color} cat named ${this.name}, and I am ${this.age}`)
+  }
+}
+
+let cat1 = new Cat("Bella", 9, "Grey")
+
+cat1.greeting()
 
 
 //////////////////////////// PROBLEM 13 ////////////////////////////
@@ -183,6 +263,21 @@ var user = {
 */
 
 //Code here
+
+class Wizard {
+    constructor(name, age, favoriteSpell) {
+      this.name = name
+      this.age = age
+      this.favoriteSpell = favoriteSpell
+    }  
+    greeting() {
+        console.log(`${this.name} has cast ${this.favoriteSpell}`)
+    }
+}
+
+let wizard1 = new Wizard("Harry", 22, "Avada Kedavra")
+
+wizard1.greeting()
 
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
@@ -208,6 +303,22 @@ var user = {
 */
 
 //Code Here
+
+class Phone{
+  constructor(brand, model, storage, color, price, sold){
+    this.brand = brand
+    this.model = model
+    this.storage = storage
+    this.color = color
+    this.price = price
+    this.sold = false
+  }
+  sell(){
+    console.log(`${this.brand} ${this.model} has been sold`)
+  } 
+}
+
+
 
   
 /*
